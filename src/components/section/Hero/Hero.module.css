@@ -1,0 +1,200 @@
+.section {
+  margin: 5rem auto 0;
+  margin-top: 5rem;
+  max-width: 800px;
+  padding: 0 2rem;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 12rem ;
+}
+
+.imgBackground {
+  width: 240px;
+  height: 240px;
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+  background-color: #aa9b9b;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.greeting {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.name {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 0.9rem 0;
+  white-space: nowrap;
+}
+.title {
+  font-size: 1.125rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.8rem 0;
+}
+
+.downloadButton {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.downloadButton:hover {
+  color: var(--contact-color);
+  background-color: var(--contact-bg);
+}
+
+.contactButton {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--contact-color);
+  background-color: var(--contact-bg);
+  border-radius: 2rem;
+  transition: background-color 0.5s ease;
+}
+
+.contactButton:hover {
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
+}
+
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.socialIconsLink {
+    font-size: 1.5rem;
+  color: var(--text-color);
+  transition: transform 0.5s ease;
+}
+.socialIconsLink:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin: 3rem auto 0;
+    margin-top: 6rem;
+    padding: 3.5rem 1rem;
+    margin: 0 1.5rem;
+    max-width: 750px;
+  }
+  .container {
+    gap: 0.7rem;
+    padding: 0;
+    width: 100%;
+    margin: 9rem 0;
+  }
+  .imgBackground {
+    width: 200px;
+    height: 200px;
+  }
+  .detailsContainer {
+    width: 100%;
+  }
+  .name {
+    font-size: 1.6rem;
+   padding: 0.5rem 0;
+  }
+  .title {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .buttonContainer {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+  .downloadButton,
+  .contactButton {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.75rem;
+  }
+  .socialIcons {
+  gap: 0.8rem;
+}
+  .socialIconsLink {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin: 0 0;
+    margin-top: 1rem;
+
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 3rem 0;
+  }
+  .imgBackground {
+    width: 150px;
+    height: 150px;
+  }
+  .name {
+    font-size: 1.4rem;
+    padding: 0.3rem 0;
+  }
+  .title {
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+  }
+  .buttonContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .downloadButton,
+  .contactButton {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.7rem;
+    width: fit-content;
+  }
+    .socialIcons {
+  gap: 0.5rem;
+}
+  .socialIconsLink {
+    font-size: 1rem;
+  }
+}

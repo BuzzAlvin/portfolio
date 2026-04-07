@@ -1,0 +1,133 @@
+.card {
+    font-family: var(--secondary-font);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    max-width: 100%;
+    width: 340px;
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.7rem;
+}
+.img {
+    width: 340px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 20px 20px 0 0;
+
+}
+.card:hover {
+    box-shadow: 0 4px 8px var(--hover-bg, 0.5);
+}
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.title {
+    font-size: 1.3rem;
+    align-items: center;
+}
+.text {
+    font-size: 0.9rem;
+}
+.tagContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    width: 100%;
+}
+.buttonContainer {
+    display: flex;
+    gap: 0.8rem;
+}
+.button {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.4rem 0.7rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: all 0.5s ease;
+}
+.button:hover {
+    background-color: var(--contact-bg);
+    color: var(--contact-color);
+    border-color: var(--hover-bg);
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .card {
+        width: 300px;
+    }
+    .container {
+        gap: 0.8rem;
+        padding: 0.9rem;
+    }
+     .img {
+        height: 250px;
+    }
+    .detailsContainer {
+        gap: 0.4rem;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .text {
+        font-size: 0.8rem;
+    }
+    .tagContainer {
+        gap: 0.4rem;
+    }
+    .buttonContainer {
+        gap: 0.4rem;
+    }
+     .button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+    .card {
+        width: 280px;
+    }
+    .container {
+        gap: 0.8rem;
+        padding: 0.5rem;
+    }
+    .img {
+        height: 180px;
+    }
+    .detailsContainer {
+        gap: 0.35rem;
+    }
+    .title {
+        font-size: 0.85rem;
+    }
+    .text {
+        font-size: 0.7rem;
+    }
+    .tagContainer {
+        gap: 0.2rem;
+    }
+    .buttonContainer {
+        gap: 0.8rem;
+    }
+    .button {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+}

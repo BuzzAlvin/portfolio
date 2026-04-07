@@ -1,0 +1,38 @@
+.container {
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modeIcon {
+    font-size: 1rem;
+    color: var(--text-color);;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+    width: 1.2rem;
+    height: 1.2rem;
+
+}
+    .modeIcon {
+        display: block;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+    width: 1.1rem;
+    height: 1.1rem;
+
+}
+    .modeIcon {
+        display: block;
+        font-size: 0.7rem;
+    }
+}
