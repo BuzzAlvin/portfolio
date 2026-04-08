@@ -98,7 +98,7 @@ const Contact = () => {
               <FaLinkedin className={styles.icon} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/buzzalvin"
+              href="https://x.com/alvin_buzz?s=21"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconBox}
@@ -108,7 +108,7 @@ const Contact = () => {
               <FaTwitter className={styles.icon} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/buzzalvin"
+              href="https://www.instagram.com/buzzalvin?igsh=MXVwbWc2dnd2cTY5aA%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconBox}
@@ -118,7 +118,7 @@ const Contact = () => {
               <FaInstagram className={styles.icon} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/buzzalvin"
+              href="www.tiktok.com/@buzzalvin_"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconBox}
