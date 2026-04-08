@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import styles from "../Projects/Projects.module.css";
 import Card from "../ui/Card/Card";
 import projects from "../../Project";
-import { scale } from "framer-motion";
 
 const Projects = () => {
   const containerVariant = {
@@ -36,9 +35,9 @@ const Projects = () => {
       </motion.div>
       <div className={styles.container}>
         <div className={styles.cardContainer}>
-          {projects.map((project) => (
-            <Card key={project.id} project={project} />
-          ))}
+          {projects.map((project) => {
+            return <Card key={project.id} project={project} />;
+          })}
         </div>
       </div>
     </motion.section>
