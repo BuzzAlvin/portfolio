@@ -22,7 +22,7 @@
 }
 .paragraph {
   color: var(--text-color);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .container {
   display: flex;
@@ -132,7 +132,7 @@
     font-size: 0.8rem;
   }
   .paragraph {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .container {
     margin-top: 1rem;
@@ -191,7 +191,7 @@
     font-size: 0.6rem;
   }
   .paragraph {
-    font-size: 0.75rem;
+    font-size: 0.69rem;
   }
   .container {
     margin-top: 0.6rem;

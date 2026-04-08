@@ -27,14 +27,14 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .send(
-        "service_ug2e17r",
-        "template_bn578j7",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           name: email.name,
           email: email.email,
           message: email.message,
         },
-        "BzBRBBTFpV172J0OG",
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
       )
       .then((res) => {
         console.log("SUCCESS", res);
