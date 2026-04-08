@@ -40,7 +40,7 @@
 }
 .socialContainer {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 .inputBox {
   display: flex;
@@ -146,7 +146,7 @@
     padding: 1.3rem;
   }
   .socialContainer {
-    gap: 0.3rem;
+    gap: 0.5rem;
   }
   .inputBox {
     gap: 0.8rem;
@@ -202,7 +202,7 @@
     padding: 0;
   }
   .socialContainer {
-    gap: 0.2rem;
+    gap: 0.4rem;
   }
   .inputBox {
     gap: 0.5rem;
@@ -212,7 +212,7 @@
     padding: 0.18rem;
   }
   .icon {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .input {
     font-size: 0.6rem;
