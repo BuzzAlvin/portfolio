@@ -60,6 +60,7 @@ const Hero = () => {
           <div className={styles.socialIcons}>
             <a
               href="https://github.com/BuzzAlvin"
+              
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -99,7 +100,7 @@ const Hero = () => {
               <FaWhatsapp />
             </a>
             <a
-              href="https://www.tiktok.com/@buzzalvin_"
+              href="https://www.tiktok.com/buzzalvin_"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
