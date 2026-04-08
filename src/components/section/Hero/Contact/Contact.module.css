@@ -167,10 +167,10 @@
     padding: 0.6rem 0.3rem;
   }
   .bottomLinks {
-    gap: 1rem;
+    gap: 1.1rem;
   }
   .links {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -223,7 +223,7 @@
     padding: 0.5rem 0.25rem;
   }
   .bottomLinks {
-    gap: 0.9rem;
+    gap: 1rem;
   }
   .links {
     font-size: 0.8rem;
