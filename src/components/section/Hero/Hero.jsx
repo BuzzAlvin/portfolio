@@ -59,7 +59,7 @@ const Hero = () => {
           </div>
           <div className={styles.socialIcons}>
             <a
-              href="#"
+              href="https:/github.com/BuzzAlvin"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -67,7 +67,7 @@ const Hero = () => {
               <FaGithub />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com/in/buzzalvin"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -75,7 +75,7 @@ const Hero = () => {
               <FaLinkedin />
             </a>
             <a
-              href="#"
+              href="https://x.com/alvin_buzz?s=21"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -83,7 +83,7 @@ const Hero = () => {
               <FaTwitter />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/buzzalvin"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -91,7 +91,7 @@ const Hero = () => {
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://wa.me/2348125923428"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -99,7 +99,7 @@ const Hero = () => {
               <FaWhatsapp />
             </a>
             <a
-              href="#"
+              href="www.tiktok.com/@buzzalvin_"
               className={styles.socialIconsLink}
               target="_blank"
               rel="noopener noreferrer"
