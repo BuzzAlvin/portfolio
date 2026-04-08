@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa";
 
 const Hero = () => {
-
   return (
     <motion.section
       id="home"
@@ -43,9 +42,17 @@ const Hero = () => {
           <p className={styles.title}>Frontend Developer</p>
 
           <div className={styles.buttonContainer}>
-            <a href="#" className={styles.downloadButton}>
+            <motion.a
+              href="./Olokungbemi_Eniola_Tech_CV.pdf.pdf"
+              className={styles.downloadButton}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              whileHover={{ scale: 1.01, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               Download CV
-            </a>
+            </motion.a>
             <a href="#contact" className={styles.contactButton}>
               Contact Me
             </a>

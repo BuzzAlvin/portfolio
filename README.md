@@ -3,7 +3,7 @@
 A modern and responsive portfolio website built with React to showcase my projects, skills, and contact information.
 
 ## 🚀 Live Demo
-https://your-portfolio-link.com
+https://buzzalvin.netlify.app/
 
 
 ## Screenshoot 
