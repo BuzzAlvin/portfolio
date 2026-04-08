@@ -118,7 +118,7 @@ const Contact = () => {
               <FaInstagram className={styles.icon} />
             </motion.a>
             <motion.a
-              href="www.tiktok.com/@buzzalvin_"
+              href="www.tiktok.com/@buzzalvin"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.iconBox}
