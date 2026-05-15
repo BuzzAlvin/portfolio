@@ -12,6 +12,11 @@ import Footer from "./components/layouts/Footer";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  /* scroll to Top effect on page load*/
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
