@@ -25,6 +25,9 @@ const About = () => {
       },
     },
   };
+
+  //Years of Experience dynamic
+  const yearOfExp = new Date().getFullYear() - 2024;
   return (
     <motion.section
       id="about"
@@ -53,7 +56,7 @@ const About = () => {
             <motion.div className={styles.aboutBox} variants={itemVariant}>
               <FaBriefcase className={styles.icon} />
               <h4 className={styles.aboutBoxTitle}>Experience</h4>
-              <p className={styles.text}>2+ years</p>
+              <p className={styles.text}>{`${yearOfExp}+ years`}</p>
               <p className={styles.text}>Frontend development</p>
             </motion.div>
             <motion.div className={styles.aboutBox} variants={itemVariant}>

@@ -1,6 +1,23 @@
 const projects = [
   {
     id: 1,
+    title: "Virtual Assistant AI ChatBot",
+    content: "Developed an AI-powered tax assistance platform with semantic search and responsive conversational UI.",
+    image: "/images/chat_desktop.PNG",
+    github: "https://github.com/BuzzAlvin/chatbot",
+    liveDemo: "https://buzzalvin-irs-chatbot.netlify.app/",
+    tags: [
+      {name: "React"},
+      {name: "Tailwind"},
+      {name: "Node.js"},
+      {name: "Express"},
+      {name: "Supabase"},
+      {name: "API"},
+      {name: "Web-App"},
+    ]
+  },
+  {
+    id: 2,
     title: "Mobile Music Player App",
     content: "Developed a mobile music player application with Home, Search, Player sections with responsive Ui and interactive audio controls.",
     image: "/images/music-cover.png",
@@ -14,7 +31,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Buy-More E-commerce Website",
     content: "Built a responsive online store with product listing and cart functionality, integrated API product data and a clean UI design.",
     image: "/images/buy-more.png",

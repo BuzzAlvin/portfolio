@@ -7,7 +7,7 @@ import {
   FaCss3,
   FaGitSquare,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiExpress } from "react-icons/si";
 import styles from "../Experience/Experience.module.css";
 
 const Experience = () => {
@@ -25,6 +25,17 @@ const Experience = () => {
     hidden: { y: 50, opacity: 0 },
     visible: { y: 0, opacity: 1 },
   };
+
+  const TechStack = [
+    {icon: <FaHtml5 />, Stack: "HTML"},
+    {icon: <FaCss3 />, Stack: "CSS3"},
+    {icon: <FaJs />, Stack: "JavaScript"},
+    {icon: <SiTailwindcss />, Stack: "Tailwindcss"},
+    {icon: <FaReact />, Stack: "React"},
+    {icon: <FaNodeJs />, Stack: "Node.js"},
+    {icon: <SiExpress />, Stack: "Express.js"},
+    {icon: <FaGitSquare />, Stack: "Git"},
+  ]
 
   return (
     <motion.section
@@ -47,40 +58,12 @@ const Experience = () => {
       </motion.div>
       <div className={styles.container}>
         <div className={styles.techStack}>
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <FaHtml5 className={styles.icon} />
-            <p className={styles.techText}>HTML5</p>
-          </motion.div>
-
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <FaCss3 className={styles.icon} />
-            <p className={styles.techText}>CSS3</p>
-          </motion.div>
-
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <FaJs className={styles.icon} />
-            <p className={styles.techText}>JavaScript</p>
-          </motion.div>
-
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <SiTailwindcss className={styles.icon} />
-            <p className={styles.techText}>Tailwind</p>
-          </motion.div>
-
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <FaReact className={styles.icon} />
-            <p className={styles.techText}>React</p>
-          </motion.div>
-
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <FaNodeJs className={styles.icon} />
-            <p className={styles.techText}>Node.js</p>
-          </motion.div>
-
-          <motion.div className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
-            <FaGitSquare className={styles.icon} />
-            <p className={styles.techText}>Git</p>
-          </motion.div>
+          {TechStack.map((item, index) => (
+            <motion.div key={index} className={styles.techItem} variants={itemVariant} whileHover={{scale: 1.1, y: -5}} transition={{type: "spring", stiffness: 300}}>
+              <span className={styles.icon}>{item.icon}</span>
+              <p className={styles.techText}>{item.Stack}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </motion.section>
