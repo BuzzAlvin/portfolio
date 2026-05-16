@@ -43,7 +43,7 @@ const Hero = () => {
 
           <div className={styles.buttonContainer}>
             <motion.a
-              href="https://drive.google.com/uc?export=download&id=https://docs.google.com/file/d/1-2UBN7mpsftwZIjtt7Rb-VvaI5A89qBI/edit?usp=docslist_api&filetype=msword"
+              href="https://drive.google.com/uc?export=download&id=1-2UBN7mpsftwZIjtt7Rb-VvaI5A89qBI"
               className={styles.downloadButton}
               target="_blank"
               rel="noopener noreferrer"
