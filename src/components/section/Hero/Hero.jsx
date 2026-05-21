@@ -43,7 +43,7 @@ const Hero = () => {
 
           <div className={styles.buttonContainer}>
             <motion.a
-              href="./Olokungbemi_Eniola_Tech_CV.pdf.pdf"
+              href="https://drive.google.com/uc?export=download&id=1-2UBN7mpsftwZIjtt7Rb-VvaI5A89qBI"
               className={styles.downloadButton}
               target="_blank"
               rel="noopener noreferrer"
