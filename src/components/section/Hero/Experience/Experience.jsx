@@ -35,7 +35,7 @@ const Experience = () => {
     {icon: <FaNodeJs />, Stack: "Node.js"},
     {icon: <SiExpress />, Stack: "Express.js"},
     {icon: <FaGitSquare />, Stack: "Git"},
-  ]
+  ];
 
   return (
     <motion.section
