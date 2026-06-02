@@ -28,11 +28,44 @@
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 2rem;
 }
+/* ===== FILTER TABS ===== */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
 
+.filterBtn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--secondary-font);
+}
+
+.filterBtn:hover {
+  background: var(--contact-bg);
+  color: #fff;
+  border-color: var(--brand-color);
+  transform: translateY(-2px);
+}
+
+.filterBtn.active {
+  background: var(--contact-bg);
+  color: var(--contact-color);
+  border-color: var(--hover-bg);
+}
 
 /* Tablets */
 @media (max-width: 768px) {
@@ -54,6 +87,18 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
+  @media (max-width: 768px) {
+  .filters {
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .filterBtn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}
 }
 
 
@@ -79,4 +124,14 @@
     gap: 1rem;
   }
 
+  @media (max-width: 480px) {
+  .filters {
+    gap: 0.4rem;
+  }
+
+  .filterBtn {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
 }
