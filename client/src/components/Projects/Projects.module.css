@@ -1,0 +1,263 @@
+.section {
+  font-family: var(--secondary-font);
+  margin: 5rem auto 0;
+  padding: 5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.text {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+}
+/* ===== FILTER TABS ===== */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--secondary-font);
+}
+
+.filterBtn:hover {
+  background: var(--contact-bg);
+  color: #fff;
+  border-color: var(--brand-color);
+  transform: translateY(-2px);
+}
+
+.filterBtn.active {
+  background: var(--contact-bg);
+  color: var(--contact-color);
+  border-color: var(--hover-bg);
+}
+
+/* SHow All Button */
+
+.viewAllBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+
+  background: transparent;
+  color: var(--text-color);
+
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background-color: var(--contact-bg);
+  color: var(--contact-color);
+  border-color: var(--hover-bg);
+
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.viewAllBtn:active {
+  transform: translateY(-1px);
+}
+
+.arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.viewAllBtn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Empty State Styles */
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.emptyStateCard {
+  width: min(100%, 620px);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.65rem;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.emptyStateTitle {
+  font-family: var(--secondary-font);
+  font-size: clamp(1.05rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.emptyStateText {
+  font-family: var(--primary-font);
+  font-size: clamp(0.82rem, 1.6vw, 1rem);
+  color: var(--hover-color);
+  max-width: 40ch;
+  line-height: 1.6;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .section {
+    margin: 6.5rem 1.5rem 0;
+    padding: 3.5rem 1rem;
+  }
+  .title {
+    font-size: 1.25rem;
+  }
+  .text {
+    font-size: 0.7rem;
+  }
+  .container {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+  }
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .viewAllBtn {
+    padding: 0.65rem 1.3rem;
+    font-size: 0.85rem;
+    gap: 0.6rem;
+  }
+
+  .arrow {
+    font-size: 1rem;
+  }
+  .filters {
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .filterBtn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .section {
+    margin: 5rem auto 0;
+    padding: 3rem 1rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .text {
+    font-size: 0.6rem;
+  }
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .cardContainer {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .filters {
+    gap: 0.4rem;
+  }
+
+  .filterBtn {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+.viewAllBtn {
+  width: min(100%, 260px);
+  padding: 0.65rem 1rem;
+  font-size: 0.8rem;
+  gap: 0.5rem;
+}
+
+.arrow {
+  font-size: 0.95rem;
+}
+
+.spinnerContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.errorMsgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}

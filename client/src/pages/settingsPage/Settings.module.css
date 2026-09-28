@@ -1,0 +1,45 @@
+.page {
+  max-width: 480px;
+}
+
+.section {
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: inline-block;
+  font-family: var(--primary-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--tech-icon);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .page {
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 1.1rem;
+  }
+}
