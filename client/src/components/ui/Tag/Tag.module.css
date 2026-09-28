@@ -1,0 +1,32 @@
+.container {
+    padding: 0rem 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 17px;
+}
+.text {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+/* Tablets */
+@media (max-width: 768px) {
+   .container {
+    padding: 0rem 0.3rem;
+}
+.text {
+    font-size: 0.7rem;
+
+} 
+}
+
+/* Mobile */
+@media (max-width: 468px) {
+    .container {
+    padding: 0rem 0.25rem;
+}
+.text {
+    font-size: 0.6rem;
+
+}
+}

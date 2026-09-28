@@ -1,0 +1,71 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --text-color: #3a3131;
+  --background-color: #fff;
+  --border-color: #3a3131;
+  --contact-bg: #3a3131;
+  --contact-color: #e2e8f0;
+  --hover-bg: #050505;
+  --hover-color: #b6b6b6;
+  --tech-icon: #2b67ac;
+}
+
+.dark {
+  --text-color: #b6b6b6;
+  --background-color: #0f172a;
+  --border-color: #334155;
+  --contact-bg: #e2e8f0;
+  --contact-color: #0f172a;
+  --hover-bg: #3a3131;
+  --hover-color: #e2e8f0;
+  --tech-icon: #b6b6b6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  min-width: 320px;
+  min-height: 100vh;
+  padding-top: 4rem;  /* prevents navbar overlap */
+  transition: all 0.2s ease;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+p {
+  font-family: var(--secondary-font);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--secondary-font);
+  line-height: 1.1;
+}
+
+section {
+  scroll-margin-top: 4rem;
+/*   padding: 2rem; */
+}

@@ -1,0 +1,216 @@
+.newButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  font-family: var(--primary-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--contact-color);
+  background-color: var(--contact-bg);
+  border: 1px solid var(--contact-bg);
+  cursor: pointer;
+}
+
+.newButton:hover {
+  opacity: 0.85;
+}
+
+.loadingText {
+  font-size: 0.9rem;
+  color: var(--hover-color);
+}
+
+.errorContent,
+.successContent {
+  border: 1px solid var(--border-color);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.errorContent {
+  border-color: #b3261e;
+}
+
+.errorTitle {
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  color: #b3261e;
+  margin-bottom: 0.2rem;
+}
+
+.errorText,
+.successText {
+  font-size: 0.85rem;
+  color: var(--hover-color);
+}
+
+.successTitle {
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  color: var(--tech-icon);
+  margin-bottom: 0.2rem;
+}
+
+.empty {
+  border: 1px dashed var(--border-color);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.emptyTitle {
+  font-family: var(--secondary-font);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.emptyText {
+  font-size: 0.85rem;
+  color: var(--hover-color);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--hover-color);
+  padding: 0 0 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table thead th:last-child {
+  text-align: right;
+}
+
+.table tbody td {
+  padding: 0.9rem 0.5rem 0.9rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.88rem;
+  vertical-align: middle;
+}
+
+.table tbody td:first-child {
+  padding-left: 0;
+  font-family: var(--secondary-font);
+  font-weight: 600;
+}
+
+.roleBadge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--tech-icon);
+  color: var(--tech-icon);
+  text-transform: capitalize;
+}
+
+.rowActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.rowAction {
+  font-family: var(--primary-font);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--tech-icon);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rowAction:hover {
+  text-decoration: underline;
+}
+
+.rowActionDanger {
+  color: #b3261e;
+}
+
+.rowAction:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.protectedLabel {
+  font-family: var(--primary-font);
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--hover-color);
+}
+
+/* ---------- Responsive ---------- */
+/* Under 720px the table collapses into stacked cards; each cell grows
+   a label (from data-label) since the header row is hidden. */
+
+@media (max-width: 720px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+  }
+
+  .table tbody td {
+    border-bottom: none;
+    padding: 0.35rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .table tbody td::before {
+    content: attr(data-label);
+    font-family: var(--primary-font);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--hover-color);
+  }
+
+  .table tbody td:first-child {
+    padding-left: 0;
+  }
+
+  .rowActions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 400px) {
+  .table tbody td {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .rowActions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
