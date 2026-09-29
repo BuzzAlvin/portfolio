@@ -15,6 +15,9 @@ const Projects = () => {
     error,
   } = useGetProjectsQuery(undefined, { refetchOnMountOrArgChange: true });
 
+  console.log(projects);
+  
+
   const navigate = useNavigate();
 
   const [activeFilter, setActiveFilter] = useState("all");
