@@ -17,7 +17,6 @@ import errorHandler from "./middleware/errorHandler.js"
 const app = express()
 const PORT = process.env.PORT || 3000
 
-app.use(errorHandler)
 
 //DB connection
 connectDB()
@@ -33,7 +32,7 @@ app.use('/admin/users', userRoutes)
 app.use('/admin/projects', projectRoutes)
 app.use('/admin/auth', authRoutes)
 
-
+app.use(errorHandler)
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
