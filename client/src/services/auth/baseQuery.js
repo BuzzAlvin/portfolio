@@ -1,7 +1,7 @@
 import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 import { logOut, setCredentials } from "./authSlice";
 
-console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
+
 
 export const baseQuery = fetchBaseQuery({
   baseUrl: `${import.meta.env.VITE_API_URL}/admin`,
