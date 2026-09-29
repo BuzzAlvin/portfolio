@@ -1,7 +1,7 @@
 import Project from "../models/Project.js";
 
 const getPublicProject = async (req, res) => {
-  const projects = await Project.find({ featured: true })
+  const projects = await Project.find({ status: true })
     .sort({ featured: -1, updatedAt: -1 })
     .lean();
 

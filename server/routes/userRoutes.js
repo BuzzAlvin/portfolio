@@ -6,10 +6,13 @@ import {
   deleteUser,
 } from "../controllers/userController.js";
 import verifyJWT from "../middleware/verifyJWT.js";
+import requireRole from "../middleware/requireRole.js";
 
 const router = express.Router();
 
 router.use(verifyJWT)
+
+router.use(requireRole("Admin"))
 
 router.route("/")
 

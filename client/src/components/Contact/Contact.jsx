@@ -62,6 +62,20 @@ const Contact = () => {
     visible: { y: 0, opacity: 1 },
   };
 
+  const socialIcons = [
+    { icon: <FaGithub />, path: "https://github.com/BuzzAlvin" },
+    { icon: <FaLinkedin />, path: "https://linkedin.com/in/buzzalvin" },
+    { icon: <FaWhatsapp />, path: "https://wa.me/2348125923428" },
+    { icon: <FaTiktok />, path: "https://www.tiktok.com/buzzalvin_" },
+  ];
+
+  const buttomNavLink = [
+    { link: "#about", name: "About" },
+    { link: "#experience", name: "Experience" },
+    { link: "#projects", name: "Projects" },
+    { link: "#contact", name: "Contact" },
+  ];
+
   return (
     <motion.section
       id="contact"
@@ -87,46 +101,19 @@ const Contact = () => {
       <div className={styles.container}>
         <div className={styles.form}>
           <motion.div className={styles.socialContainer} variants={itemVariant}>
-            <motion.a
-              href="https://linkedin.com/in/buzzalvin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.iconBox}
-              whileHover={{ scale: 1.012, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <FaLinkedin className={styles.icon} />
-            </motion.a>
-            <motion.a
-              href="https://x.com/alvin_buzz?s=21"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.iconBox}
-              whileHover={{ scale: 1.012, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <FaTwitter className={styles.icon} />
-            </motion.a>
-            <motion.a
-              href="https://www.instagram.com/buzzalvin?igsh=MXVwbWc2dnd2cTY5aA%3D%3D&utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.iconBox}
-              whileHover={{ scale: 1.012, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <FaInstagram className={styles.icon} />
-            </motion.a>
-            <motion.a
-              href="https://www.tiktok.com/buzzalvin_"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.iconBox}
-              whileHover={{ scale: 1.012, y: -5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <FaTiktok className={styles.icon} />
-            </motion.a>
+            {socialIcons.map((link, index) => (
+              <motion.a
+                key={index}
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.iconBox}
+                whileHover={{ scale: 1.012, y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <span className={styles.icon}>{link.icon}</span>
+              </motion.a>
+            ))}
           </motion.div>
 
           <form className={styles.inputBox} onSubmit={handleSubmit}>
@@ -176,38 +163,17 @@ const Contact = () => {
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         viewport={{ once: true }}
       >
-        <motion.a
-          href="#about"
-          className={styles.links}
-          whileHover={{ scale: 1.012, y: -5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          About
-        </motion.a>
-        <motion.a
-          href="#experience"
-          className={styles.links}
-          whileHover={{ scale: 1.012, y: -5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Experience
-        </motion.a>
-        <motion.a
-          href="#projects"
-          className={styles.links}
-          whileHover={{ scale: 1.012, y: -5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Projects
-        </motion.a>
-        <motion.a
-          href="#contact"
-          className={styles.links}
-          whileHover={{ scale: 1.012, y: -5 }}
-          transition={{ type: "spring", stiffness: 300 }}
-        >
-          Contact
-        </motion.a>
+        {buttomNavLink.map((btn) => (
+          <motion.a
+            key={btn.name}
+            href={btn.link}
+            className={styles.links}
+            whileHover={{ scale: 1.012, y: -5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            {btn.name}
+          </motion.a>
+        ))}
       </motion.div>
     </motion.section>
   );

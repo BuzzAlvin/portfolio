@@ -7,6 +7,7 @@ import {
 } from "../controllers/projectController.js";
 import upload from "../middleware/upload.js";
 import verifyJWT from "../middleware/verifyJWT.js";
+import requireRole from "../middleware/requireRole.js";
 
 const router = express.Router();
 
@@ -16,11 +17,11 @@ router
   .route("/")
   .get(getAllProjects)
 
-  .post(upload.single("image"), createNewProject);
+  .post(requireRole("Admin"), upload.single("image"), createNewProject);
 
 router
   .route("/:id")
-  .patch(upload.single("image"), updateProject)
-  .delete(deleteProject);
+  .patch(requireRole("Admin"), upload.single("image"), updateProject)
+  .delete(requireRole("Admin"), deleteProject);
 
 export default router;

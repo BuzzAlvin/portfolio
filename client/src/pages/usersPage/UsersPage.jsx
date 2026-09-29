@@ -10,7 +10,6 @@ import {
 } from "../../services/userApi";
 
 const isProtected = (user) => {
-  console.log("PROTECTED CHECK:", user.role);
 
   return Array.isArray(user.role)
     ? user.role.includes("Admin")
